@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="countdown">
+      <div class="isi" id="isi"><span>ISI B.MATH HONOURS</span></div>
+      <div class="daysLeft" id="daysLeft"></div>
+      <div class="timeLeft" id="timeLeft"></div>
+    </div>
+  </div>
+
+  <script>
+    var countDownDate = new Date("May 12, 2024 09:00:00").getTime();
+
+    var x = setInterval(function() {
+      var now = new Date().getTime();
+      var distance = countDownDate - now;
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      if (hours < 10) {hours = "0" + hours};
+      if (minutes < 10) {minutes = "0" + minutes};
+      if (seconds < 10) {seconds = "0" + seconds};
+
+      document.getElementById("daysLeft").innerHTML = "<span>" + days + " days</span>";
+      document.getElementById("timeLeft").innerHTML = "<span>" + hours + ":" + minutes + ":" + seconds + "</span>";
+    }, 1000);
+
+  </script>
+
+</body>
+</html>
