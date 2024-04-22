@@ -1,10 +1,18 @@
 <style>
+@font-face{
+  font-family: 'JetBrainsMono';
+  src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Regular.woff') format('woff'),
+    url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/ttf/JetBrainsMono-Regular.ttf') format('truetype');
+  font-weight: 1000;
+  font-style: normal;
+}
     * {
       transition: all 2s ease;
       box-sizing: border-box; /* Apply box-sizing globally */
     }
     body {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: JetBrainsMono, monospace;
       font-weight: 1000;
       margin: 0;
       padding: 0;
